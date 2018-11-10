@@ -1,1 +1,3 @@
-$('body').scrollspy({ target: '#navbar-example' })
+$(window).scroll(function(){
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
+});

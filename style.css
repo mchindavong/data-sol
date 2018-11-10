@@ -8,17 +8,26 @@ header.masthead {
     padding-top: 150px;
     padding-bottom: 100px;
     color: white;
-    background: rgb(255, 0, 64);
-    background: -webkit-gradient (linear, right top, left top, from(rgb(255, 0, 64)), to(#FF4E00));
-    background: linear-gradient(to left, rgb(255, 0, 64), #FF4E00);
-  }
+    background: #FF005E;
+    background: -webkit-gradient (linear, right top, left top, from(#FF005E), to(#FF4E00));
+    background: linear-gradient(to left, #FF005E, #FF4E00);
+}
     
 .featurette-divider {
     margin: 5rem 0;
-  }
+}
   
   .featurette-heading {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -.05rem;
-  }
+}
+
+.navbar.bg-light {
+    transition: 500ms ease;
+    background: transparent !important;
+}
+
+.navbar.bg-light.scrolled {
+    background: #F9F9F9 !important;
+}
