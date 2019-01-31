@@ -2,39 +2,148 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="src/fullPage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="vendors/easings.min.js"></script>
     <script type="text/javascript" src="src/fullPage.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
-                autoScrolling:true,
-                scrollHorizontally: true
+                anchors: ['firstPage', 'secondPage', 'thirdPage'],
+                navigation: true,
+                navigationPosition: 'right',
+                scrollBar: true,
+                afterRender: function(index, nextIndex, direction){
+                var el = $('.intro');
+                el.paroller({
+                    factor: 0.5,
+                    type: 'background',
+                    direction: 'vertical'
+                });
+                },
+                /* reinitialize paroller on window resize event */
+                afterResize: function() {
+                var el = $('.intro');
+                el.paroller({
+                    factor: 0.5,
+                    type: 'background',
+                    direction: 'vertical'
+                });
+                }
             });
         });
     </script>
- 
+
+
     <style>
+        h1{
+        font-size: 5em;
+        font-family: 'Roboto', sans-serif;
+        margin:0;
+        }
         .section{
-            font-size: 6em;
-            text-align: center;
+        text-align:center;
+        }
+        .controlArrow.prev {
+        left: 50px;
+        }
+        .controlArrow.next{
+        right: 50px;
+        }
+
+        #infoMenu li a {
+        color: #fff;
+        }
+
+        /* fullpage configuration */
+        .section, .slide {
+        top: 0;
+        left: 0;
+        visibility: visible;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-perspective: 1000;
+        -moz-perspective: 1000;
+        -ms-perspective: 1000;
+        perspective: 1000;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        }
+
+        /* parallax container configuration */
+        .intro {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: relative;
+        }
+        .intro h1 {
+        padding-top: 70px;
+        color: #555;
+        }
+        .intro p {
+        color: #222;
+        }
+
+        /* parallax container backgrounds */
+        #section0 .intro {
+        background-image: url('images/stock1.jpg');
+        }
+        #section1 .intro {
+        background-image: url('images/stock2.jpg');
+        }
+        #section2 .intro {
+        background-image: url('images/stock3.jpg');
         }
     </style>
+
 </head>
  
 <body>
     
     <div id="fullpage">
-        <div class="section">Section 1</div>
-        <div class="section">
-            <div class="slide">Section 2 Slide 1</div>
-            <div class="slide">Section 2 Slide 2</div>
-            <div class="slide">Section 2 Slide 3</div>
+        <div class="section" id="section0">
+            <div class="intro">
+                <div data-aos="fade-right">
+                    <h1>hello there</div></h1>
+            </div>
         </div>
-        <div class="section">Section 3</div>
-    </div>            
-
+        <div class="section" id="section1">
+            <div class="intro">
+                <div data-aos="fade-right">
+                    <h1>hello again</h1>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="intro">
+                <div data-aos="flip-down">
+                    <h1>goodbye</h1>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
