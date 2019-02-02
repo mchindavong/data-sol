@@ -2,10 +2,10 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="src/fullPage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="vendors/easings.min.js"></script>
     <script type="text/javascript" src="src/fullPage.js"></script>
@@ -42,7 +42,7 @@
     <style>
         h1{
         font-size: 5em;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Righteous', cursive;
         margin:0;
         }
         .section{
@@ -109,39 +109,207 @@
         background-image: url('images/stock1.jpg');
         }
         #section1 .intro {
-        background-image: url('images/stock2.jpg');
+        background-color: whitesmoke;
         }
         #section2 .intro {
         background-image: url('images/stock3.jpg');
         }
-    </style>
 
+        .jumbotron {
+            background-color: transparent !important;
+        }
+        
+        .container {
+            margin: auto;
+            padding: 50px;
+            max-width: 75%;
+        }
+
+        .card {
+            background-color: rgba(245, 245, 245, 0.452);
+            border: none;
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+        }
+        
+        .fas {
+            color: rgb(255, 217, 0);
+        }
+        .media {
+            background-color: rgba(255, 217, 0, 0.575);
+            min-height: 25%;
+        }
+
+    </style>
+<title>Data Solutions</title>
 </head>
  
 <body>
-    
+
     <div id="fullpage">
+
         <div class="section" id="section0">
             <div class="intro">
-                <div data-aos="fade-right">
-                    <h1>hello there</div></h1>
+                <div data-aos="zoom-in" data-aos-duration="2000">
+                    <div class="jumbotron">
+                        <h1>CyberCorp Solutions</h1> 
+                        <p class="display-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                        <p>Quibusdam beatae odit eos accusantium ab temporibus? Asperiores earum atque dicta natus, tenetur possimus!</p>
+                        <button type="button" class="btn btn-light">Learn more</button>                      
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="section" id="section1">
             <div class="intro">
-                <div data-aos="fade-right">
-                    <h1>hello again</h1>
+
+                <div class="container">
+                        <div data-aos="fade-in" data-aos-duration="2000" data-aos-delay="1000">
+                    <div class="card-deck">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="images/group.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="images/stock2.jpg" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="card">
+                                    <div class="card-body">
+                                        <img src="images/group2.jpg" class="card-img-top" alt="...">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                   </div>
+
+                     <div data-aos="fade-in" data-aos-duration="2000">
+                <div class="media">
+                       
+                    
+                    <div class="container">
+                            <p class="display-4">Your business. Your brand.</p>
+                            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error mollitia modi expedita tempora consequuntur corrupti eligendi a accusantium saepe nulla eum excepturi, laborum iusto, ipsa rem. Omnis a libero enim.</p>
+                            <button type="button" class="btn btn-secondary">Read more</button>
+
+                    </div>
+                        </div>
+                </div>
+                                                
+                <div class="container">                   
+                    
+                    <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">
+                        <div class="card-deck">
+                            <div class="card">
+                                <h2><i class="fas fa-lightbulb fa-2x"></i></h2>
+                                <div class="card-body">
+                                    <h5 class="card-title">Strategy</h5>
+                                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h2><i class="fas fa-chart-pie fa-2x"></i></h2>
+                                <div class="card-body">
+                                    <h5 class="card-title">Market Analysis</h5>
+                                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                    <h2><i class="fas fa-headset fa-2x"></i></h2>
+                                    <div class="card-body">
+                                        <h5 class="card-title">24/7</h5>
+                                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            <div class="card">
+                                <h2><i class="fas fa-mail-bulk fa-2x"></i></h2>
+                                    <div class="card-body">
+                                    <h5 class="card-title">Efficiency</h5>
+                                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                            </div>
+                            <div class="card">
+                                <h2><i class="fas fa-certificate fa-2x"></i></h2>
+                                <div class="card-body">
+                                    <h5 class="card-title">Certified </h5>
+                                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section" id="section2">
+            <div class="intro">
+                <div class="container">
+                    <div data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1000">
+
+                    <div class="card-deck">
+                        <div class="card">
+                        <div class="card-body">
+                            <img class="avatar" src="images/avatar1.jpg" class="card-img-top" alt="...">
+                                <blockquote class="blockquote mb-0 card-body">
+                                <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. <i class="fas fa-quote-right"></i></p>
+                                <footer class="blockquote-footer">
+                                <small class="text-muted">
+                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                </small>
+                                </footer>
+                            </blockquote>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-body">
+                            <img class="avatar" src="images/avatar2.jpg" class="card-img-top" alt="...">
+                                <blockquote class="blockquote mb-0 card-body">
+                                <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. <i class="fas fa-quote-right"></i></p>
+                                <footer class="blockquote-footer">
+                                <small class="text-muted">
+                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                </small>
+                                </footer>
+                            </blockquote>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-body">
+                            <img class="avatar" src="images/avatar 3.jpg" class="card-img-top" alt="...">
+                                <blockquote class="blockquote mb-0 card-body">
+                                <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. <i class="fas fa-quote-right"></i></p>
+                                <footer class="blockquote-footer">
+                                <small class="text-muted">
+                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                </small>
+                                </footer>
+                            </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+
                 </div>
             </div>
         </div>
-        <div class="section" id="section2">
-            <div class="intro">
-                <div data-aos="flip-down">
-                    <h1>goodbye</h1>
-                </div>
-        </div>
-    </div>
+        
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
       AOS.init();
     </script>
