@@ -12,9 +12,9 @@
 
 
     <script type="text/javascript">
-    $(document).ready(function() {
-	$('#fullpage').fullpage({
-		anchors: ['firstPage', 'secondPage', 'thirdPage'],
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', 'thirdPage'],
                 navigation: true,
                 navigationPosition: 'right',
                 scrollBar: true,
@@ -34,15 +34,9 @@
                     type: 'background',
                     direction: 'vertical'
                 });
-                },
-		autoScrolling:true,
-		scrollHorizontally: true
-	});
-
-	//methods
-	$.fn.fullpage.setAllowScrolling(false);
-});
-
+                }
+            });
+        });
     </script>
 
 
