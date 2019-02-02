@@ -8,36 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="vendors/easings.min.js"></script>
-    
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                anchors: ['firstPage', 'secondPage', 'thirdPage'],
-                navigation: true,
-                navigationPosition: 'right',
-                scrollBar: true,
-                afterRender: function(index, nextIndex, direction){
-                var el = $('.intro');
-                el.paroller({
-                    factor: 0.5,
-                    type: 'background',
-                    direction: 'vertical'
-                });
-                },
-                /* reinitialize paroller on window resize event */
-                afterResize: function() {
-                var el = $('.intro');
-                el.paroller({
-                    factor: 0.5,
-                    type: 'background',
-                    direction: 'vertical'
-                });
-                }
-            });
-        });
-    </script>
-
 
     <style>
         h1{
@@ -311,7 +281,33 @@
             </div>
         </div>
         
-
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    anchors: ['firstPage', 'secondPage', 'thirdPage'],
+                    navigation: true,
+                    navigationPosition: 'right',
+                    scrollBar: true,
+                    afterRender: function(index, nextIndex, direction){
+                    var el = $('.intro');
+                    el.paroller({
+                        factor: 0.5,
+                        type: 'background',
+                        direction: 'vertical'
+                    });
+                    },
+                    /* reinitialize paroller on window resize event */
+                    afterResize: function() {
+                    var el = $('.intro');
+                    el.paroller({
+                        factor: 0.5,
+                        type: 'background',
+                        direction: 'vertical'
+                    });
+                    }
+                });
+            });
+        </script>
     <script type="text/javascript" src="src/fullPage.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
