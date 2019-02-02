@@ -8,6 +8,47 @@
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="vendors/easings.min.js"></script>
+    <script type="text/javascript" src="src/fullPage.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(false);
+});
+
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', 'thirdPage'],
+                navigation: true,
+                navigationPosition: 'right',
+                scrollBar: true,
+                afterRender: function(index, nextIndex, direction){
+                var el = $('.intro');
+                el.paroller({
+                    factor: 0.5,
+                    type: 'background',
+                    direction: 'vertical'
+                });
+                },
+                /* reinitialize paroller on window resize event */
+                afterResize: function() {
+                var el = $('.intro');
+                el.paroller({
+                    factor: 0.5,
+                    type: 'background',
+                    direction: 'vertical'
+                });
+                }
+            });
+        });
+    </script>
+
 
     <style>
         h1{
@@ -77,15 +118,12 @@
         /* parallax container backgrounds */
         #section0 .intro {
         background-image: url('images/stock1.jpg');
-        height: 100%;
         }
         #section1 .intro {
         background-color: whitesmoke;
-        height: 100%;
         }
         #section2 .intro {
         background-image: url('images/stock3.jpg');
-        height: 100%;
         }
 
         .jumbotron {
@@ -281,34 +319,6 @@
             </div>
         </div>
         
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('#fullpage').fullpage({
-                    anchors: ['firstPage', 'secondPage', 'thirdPage'],
-                    navigation: true,
-                    navigationPosition: 'right',
-                    scrollBar: true,
-                    afterRender: function(index, nextIndex, direction){
-                    var el = $('.intro');
-                    el.paroller({
-                        factor: 0.5,
-                        type: 'background',
-                        direction: 'vertical'
-                    });
-                    },
-                    /* reinitialize paroller on window resize event */
-                    afterResize: function() {
-                    var el = $('.intro');
-                    el.paroller({
-                        factor: 0.5,
-                        type: 'background',
-                        direction: 'vertical'
-                    });
-                    }
-                });
-            });
-        </script>
-    <script type="text/javascript" src="src/fullPage.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
