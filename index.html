@@ -309,9 +309,20 @@
     </div>
         </head>
         <body>
+            
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
+        $(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(false);
+});
       AOS.init();
     </script>
 </body>
