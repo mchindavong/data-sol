@@ -27,14 +27,14 @@
                 });
                 },
                 /* reinitialize paroller on window resize event */
-                // afterResize: function() {
-                // var el = $('.intro');
-                // el.paroller({
-                //     factor: 0.5,
-                //     type: 'background',
-                //     direction: 'vertical'
-                // });
-                // },
+                afterResize: function() {
+                var el = $('.intro');
+                el.paroller({
+                    factor: 0.5,
+                    type: 'background',
+                    direction: 'vertical'
+                });
+                },
             });
         });
     </script>
@@ -148,9 +148,7 @@
 
     </style>
 <title>Data Solutions</title>
-</head>
- 
-<body>
+
 
     <div id="fullpage">
 
@@ -309,7 +307,8 @@
             </div>
         </div>
     </div>
-        
+        </head>
+        <body>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
