@@ -14,7 +14,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                anchors: ['firstPage', 'secondPage', 'thirdPage'],
+
                 navigation: true,
                 navigationPosition: 'right',
                 scrollBar: true,
@@ -67,7 +67,7 @@
         visibility: visible;
         overflow: hidden;
         width: 100%;
-        height: 100% !important;
+        height: 100%;
         opacity: 1;
         background-repeat: no-repeat;
         background-position: center center;
@@ -148,7 +148,9 @@
 
     </style>
 <title>Data Solutions</title>
-
+</head>
+ 
+<body>
 
     <div id="fullpage">
 
@@ -307,22 +309,10 @@
             </div>
         </div>
     </div>
-        </head>
-        <body>
-            
+        
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
-        $(document).ready(function() {
-	$('#fullpage').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true
-	});
-
-	//methods
-	$.fn.fullpage.setAllowScrolling(false);
-});
       AOS.init();
     </script>
 </body>
