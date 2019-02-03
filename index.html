@@ -34,7 +34,7 @@
                     type: 'background',
                     direction: 'vertical'
                 });
-                }
+                },
             });
         });
     </script>
@@ -313,6 +313,15 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
+        new fullpage('#fullpage', {
+	//options here
+	autoScrolling:true,
+	scrollHorizontally: true
+});
+
+//methods
+fullpage_api.setAllowScrolling(false);
+
       AOS.init();
     </script>
 </body>
